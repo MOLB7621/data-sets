@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 
 tss_bed="tss.bed"
-signal="ctcf.hela.chr22.bg.gz"
-genome="hg19.genome"
+signal="../ctcf.hela.chr22.bg.gz"
+genome="../hg19.genome"
 
 bedtools slop -i $tss_bed -b 1000 -g $genome \
     | bedtools makewindows -b - -n 40 -i winnum \
